@@ -16,7 +16,7 @@ interface TMDBSearchParams {
 }
 
 export default async function fetchMovies(movieName: string): Promise<Movie[]> {
-  const myToken = import.meta.env.VITE_API_KEY;
+  const myToken = import.meta.env.VITE_TMDB_TOKEN;
   const config: TMDBSearchParams = {
     params: {
       query: movieName,
